@@ -1,0 +1,31 @@
+<div class="mt-3">
+    <h2>Projects</h2>
+    <div *ngFor="let pro of projects">
+        <div pro="pro" class="my-4">
+            <h3>{{pro.head}}</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <img style="width: 70vh;" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"
+                        [class.zoom]="isHovered" src={{pro.image}}>
+                </div>
+                <div class="col-md-6">
+                    <p>{{pro.desc}}</p>
+                    <div>
+                        <h4>Technologies Used</h4>
+                        <div class="d-flex flex-row">
+                            <p class="mx-4" *ngFor="let tech of pro.techUsed">{{tech}}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>LiveLinks</h4>
+                        <div>{{pro.LiveLink}}</div>
+                    </div>
+                    <div>
+                        <h4>Date of developed</h4> {{pro.createdDate| date}}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
