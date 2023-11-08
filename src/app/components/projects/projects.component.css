@@ -1,5 +1,8 @@
 .zoom{
     transition: transform 0.3s ease-in-out;
-    transform: scale(1.1);
-    
+    transform: scale(0.9);
+}
+
+.borderStyle{
+    border-radius: 10px;
 }
