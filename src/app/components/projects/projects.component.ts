@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Projects, projects } from './projects';
 // import { trigger, state, style, animate, transition } from '@angular/animations';
 
@@ -15,13 +15,17 @@ import { Projects, projects } from './projects';
   //   ])
   // ]
 })
-export class ProjectsComponent {
+
+export class ProjectsComponent implements OnInit {
   projects: projects[] = Projects;
 
-  onMouseEnter(pro:projects) {
+  onMouseEnter(pro: projects) {
     pro.isHovered = true;
   }
-  onMouseLeave(pro:projects) {
+  onMouseLeave(pro: projects) {
     pro.isHovered = false;
+  }
+
+  ngOnInit(): void {
   }
 }

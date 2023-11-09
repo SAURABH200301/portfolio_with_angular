@@ -1,8 +1,11 @@
-<div class="  m-3">
-    <div class="flex flex-column mx-3">
-        <div class="cursor"><i [routerLink]="['/']" class="bi bi-house h3"></i></div>
-        <div class="cursor"><i  [routerLink]="['/skills']" class="bi bi-file-person-fill h3"></i></div>
-        <div class="cursor"><i [routerLink]="['/projects']" class="bi bi-list-task h3"></i></div>
-        <div class="cursor"><i [routerLink]="['/contact']" class="bi bi-calendar-range-fill h3"></i></div>
+<div class="position-fixed  mt-3">
+    <div class="flex flex-column mx-3  align-content-around">
+        <div class="cursor  px-3"><i [routerLink]="['/']" class="bi bi-house h3"></i></div>
+        <div class="cursor px-3"><i [routerLink]="['/skills']" class="bi bi-file-person-fill h3"></i></div>
+        <div class="cursor px-3"><i [routerLink]="['/projects']" class="bi bi-list-task h3"></i></div>
+        <div class="cursor px-3"><i [routerLink]="['/contact']" class="bi bi-calendar-range-fill h3"></i></div>
+        <div class="text">
+            <h1>{{pathName|titlecase}}</h1>
+        </div>
     </div>
 </div>

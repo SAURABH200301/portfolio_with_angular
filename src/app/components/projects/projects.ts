@@ -16,7 +16,7 @@ export const Projects: projects[] = [
     {
         image: '/assets/icons/Tasky.gif',
         head: 'Task management app',
-        desc: ' task management app given you feature of authentication, CRUD, function of MONGODB',
+        desc: ' Task Management app given you feature of authentication, CRUD, function of MONGODB',
         techUsed: ['/assets/icons/react.png', '/assets/icons/mongo.png', '/assets/icons/node.png', '/assets/icons/express.png'],
         LiveLink: [
             {

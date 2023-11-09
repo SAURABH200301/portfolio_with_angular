@@ -11,6 +11,8 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { routerPath } from './routerPath';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { PageNameService } from './services/pageName.service';
 
 @NgModule({
   declarations: [
@@ -25,9 +27,10 @@ import { ContactsComponent } from './components/contacts/contacts.component';
   imports: [
     NgbModule,
     BrowserModule,
-    RouterModule.forRoot(routerPath)
+    RouterModule.forRoot(routerPath),
+    MatTooltipModule
   ],
-  providers: [],
+  providers: [PageNameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

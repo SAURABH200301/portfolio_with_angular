@@ -1,11 +1,14 @@
 <div class="m-3 ">
-    <H2>Skills</H2>
+
     <div class="d-flex flex-column">
         <div class="m-3">
             <h4>Programming Skills</h4>
             <div class="d-flex flex-row mt-3">
                 <div *ngFor="let skill of prog" class="mx-3">
-                    <span><img style="height: 50px;" src={{skill.image}} alt={{skill.lang}}></span>
+                    <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                        data-bs-title="This top tooltip is themed via CSS variables.">
+                        <img style="height: 50px;" src={{skill.image}} alt={{skill.lang}}>
+                    </span>
                 </div>
             </div>
         </div>
