@@ -9,13 +9,15 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   pathName: string | undefined;
-  constructor(private router: Router,private pageName: PageNameService) {
-    this.pathName = (pageName.pageName)
+  constructor(private router: Router, private pageName: PageNameService) {
   }
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.pathName=event.urlAfterRedirects;
+        if (event.urlAfterRedirects === "/")
+          this.pathName = "Saurabh Sharma"
+        else
+          this.pathName = event.urlAfterRedirects.substring(1);
         this.pageName.updatePathName(event.urlAfterRedirects);
       }
     });

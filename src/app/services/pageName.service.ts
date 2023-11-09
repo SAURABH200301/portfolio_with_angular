@@ -4,7 +4,6 @@ import { Injectable, OnInit, SimpleChanges } from '@angular/core';
   providedIn: 'root'
 })
 export class PageNameService implements OnInit {
-  currentUrl: string | undefined;
   pageName: string = "Saurabh Sharma";
 
   getPathName(): string {
@@ -12,11 +11,13 @@ export class PageNameService implements OnInit {
   }
 
   updatePathName(newPathName: string): void {
-
-    if(newPathName==="/")
-      this.pageName="Saurabh Sharma"
-    else
-      this.pageName = newPathName;
+    if (newPathName.length === 1) {
+      this.pageName = "Saurabh Sharma"
+      return;
+    }
+    else {
+      this.pageName = newPathName.substring(1);
+    }
     // console.log("updated", this.pageName)
   }
   constructor() { }
