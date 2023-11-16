@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         if (event.urlAfterRedirects === "/")
-          this.pathName = "Saurabh Sharma"
+          this.pathName = ""
         else
           this.pathName = event.urlAfterRedirects.substring(1);
         this.pageName.updatePathName(event.urlAfterRedirects);
